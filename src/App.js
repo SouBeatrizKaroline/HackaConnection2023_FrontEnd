@@ -33,7 +33,7 @@ function App() {
       console.log(response.status)
 
       if (response.status === 200) {
-        setUploadStatus("success");
+        setUplπoadStatus("success");
       } else {
         setUploadStatus(`Error: ${response.data}`);
       }
@@ -52,7 +52,12 @@ function App() {
         <button onClick={handleUpload} disabled={!selectedFile || isUploading}>
           {isUploading ? "Uploading..." : "Upload"}
         </button>
-        {uploadStatus === "success" && <p>File uploaded successfully!</p>}
+        {uploadStatus === "success" ? (
+          <p>File uploaded successfully!</p>
+        ) : uploadStatus === "error" ? (
+          <p>Failed to upload file. Please try again.</p>
+        ) : null}
+
       </Content>
       <GlobalStyle />
     </Container>
