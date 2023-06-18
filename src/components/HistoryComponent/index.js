@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import { DropContainer, Title, Line, StyledLink } from "./styles";
+
 function HistoryComponent() {
   const [shippings, setShippings] = useState([]);
 
@@ -32,22 +34,22 @@ function HistoryComponent() {
   }, []);
 
   return (
-    <div>
-      <h1>Shipping History</h1>
+    <DropContainer>
+      <Title>Shipping History</Title>
       {shippings.length > 0 ? (
         shippings.map((shipping) => (
           <div key={shipping.id}>
             <p>File Name: {shipping.fileName}</p>
             <p>Status: {shipping.status}</p>
-            <p>Return Path: {shipping.returnpath}</p>
+            <StyledLink>Return Path: {shipping.returnpath}</StyledLink>
             <p>Created At: {shipping.createdAt}</p>
-            <hr />
+            <Line />
           </div>
         ))
       ) : (
         <p>No shipping history available.</p>
       )}
-    </div>
+    </DropContainer>
   );
 }
 
