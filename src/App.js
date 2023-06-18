@@ -53,7 +53,6 @@ function App() {
           {isUploading ? "Uploading..." : "Upload"}
         </button>
         {uploadStatus === "success" && <p>File uploaded successfully!</p>}
-        {uploadStatus && <p>{uploadStatus}</p>}
       </Content>
       <GlobalStyle />
     </Container>
