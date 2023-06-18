@@ -4,12 +4,13 @@ import GlobalStyle from "./styles/global";
 
 import { Container, Content } from "./styles";
 
+import Upload from "./components/Upload";
+
 function App() {
-  const [name, setName] = useState("");
-  const [selectedFile, setSelectedFile] = useState(null);
   return (
     <Container>
-      <Content>Upload File</Content>
+      <Content>Upload City</Content>
+      <Upload />
       <GlobalStyle />
     </Container>
   );
