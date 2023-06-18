@@ -1,6 +1,3 @@
-
-
-
 import GlobalStyle from "./styles/global";
 import { Container, Content } from "./styles";
 import HistoryComponent from "./components/HistoryComponent";
