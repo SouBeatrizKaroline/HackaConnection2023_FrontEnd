@@ -6,7 +6,7 @@ function HistoryComponent() {
 
   const fetchShippings = () => {
     axios
-      .get("https://d73a-2804-14c-88-22bf-ddce-b78a-deca-5eed.ngrok-free.app/history")
+      .get("https://9d6d-2804-14c-88-22bf-9c6c-3a60-17cc-f9f9.ngrok-free.app/")
       .then((response) => {
         const { shippings } = response.data;
         setShippings(shippings);
