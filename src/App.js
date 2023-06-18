@@ -3,6 +3,7 @@ import axios from "axios";
 
 import GlobalStyle from "./styles/global";
 import { Container, Content } from "./styles";
+import HistoryComponent from "./components/HistoryComponent";
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -33,7 +34,7 @@ function App() {
       console.log(response.status)
 
       if (response.status === 200) {
-        setUplπoadStatus("success");
+        setUploadStatus("success");
       } else {
         setUploadStatus(`Error: ${response.data}`);
       }
@@ -57,7 +58,7 @@ function App() {
         ) : uploadStatus === "error" ? (
           <p>Failed to upload file. Please try again.</p>
         ) : null}
-
+        <HistoryComponent />
       </Content>
       <GlobalStyle />
     </Container>
