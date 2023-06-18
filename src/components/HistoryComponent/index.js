@@ -41,7 +41,7 @@ function HistoryComponent() {
           <div key={shipping.id}>
             <p>File Name: {shipping.fileName}</p>
             <p>Status: {shipping.status}</p>
-            Return Path: <link href={shipping.returnpath} variant={shipping.returnpath}> </link>
+            <p>Return Path: <link href={shipping.returnpath} variant={shipping.returnpath}> </link></p>
             <p>Created At: {shipping.createdAt}</p>
             <Line />
           </div>
