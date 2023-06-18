@@ -1,24 +1,17 @@
 import React, { useState } from "react";
 
+import GlobalStyle from "./styles/global";
+
+import { Container, Content } from "./styles";
+
 function App() {
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   return (
-    <div className="App">
-      <form>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-
-        <input
-          type="file"
-          value={selectedFile}
-          onChange={(e) => setSelectedFile(e.target.files[0])}
-        />
-      </form>
-    </div>
+    <Container>
+      <Content>Upload File</Content>
+      <GlobalStyle />
+    </Container>
   );
 }
 
